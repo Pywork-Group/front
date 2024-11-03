@@ -1,0 +1,64 @@
+.search {
+	@apply flex items-center justify-between gap-10 bg-gray-800/25;
+
+	&.medium {
+		@apply rounded-md;
+
+		.input {
+			@apply py-4;
+			padding-left: 26px;
+		}
+	}
+
+	&.small {
+		@apply rounded-sm;
+
+		.input {
+			@apply py-2.5 text-md;
+			padding-left: 20px;
+		}
+
+		.icon {
+			@apply w-4;
+		}
+	}
+}
+.input {
+	@apply w-full py-4 text-gray-800 bg-transparent;
+	padding-left: 26px;
+
+	&::placeholder {
+		@apply text-gray-800;
+	}
+}
+.icon {
+	margin-right: 26px;
+}
+
+@media (max-width: 1200px) {
+	.search {
+		&.medium {
+			.input {
+				@apply py-3.5 text-md-plus;
+				padding-left: 20px;
+			}
+		}
+	}
+	.icon {
+		@apply mr-5;
+		width: 22px;
+		height: 22px;
+	}
+}
+
+@media (max-width: 850px) {
+	.search {
+		@apply gap-5;
+
+		&.medium {
+			.input {
+				@apply py-3;
+			}
+		}
+	}
+}

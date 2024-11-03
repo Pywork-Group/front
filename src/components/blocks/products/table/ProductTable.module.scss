@@ -1,0 +1,338 @@
+.item {
+	@apply w-full flex justify-between items-center gap-5 bg-white rounded-md;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+	padding: 21px 50px 21px 23px;
+}
+.left {
+	@apply flex items-start;
+	min-width: 450px;
+	max-width: 500px;
+}
+.leftFill {
+	@apply w-full flex gap-8;
+}
+.center,
+.info {
+	@apply flex items-center;
+}
+.center {
+	@apply justify-center gap-5 mx-5 w-full;
+}
+.info {
+	@apply relative;
+}
+.preview {
+	min-width: 160px;
+	min-height: 160px;
+	max-width: 160px;
+	max-height: 160px;
+
+	> img {
+		@apply w-full h-full object-cover object-center rounded-sm;
+	}
+}
+.types {
+	@apply flex flex-col gap-2;
+}
+.type {
+	@apply w-10 h-10 rounded-full flex items-center justify-center p-1;
+	background-color: #c8c8c8;
+}
+.saleTag,
+.newestTag {
+	@apply rounded-sm font-roboto-serif text-md-minus text-white text-center;
+	padding: 5px 10px;
+	min-width: 76px;
+}
+.saleTag {
+	@apply bg-red-400;
+}
+.newestTag {
+	@apply bg-green-400;
+}
+.images {
+	@apply flex-col items-center gap-4;
+	display: flex !important;
+	height: 180px;
+
+	> div:first-child {
+		max-height: 160px;
+	}
+}
+.image {
+	> img {
+		@apply image-like-bg-cover rounded-sm;
+		max-height: 160px;
+	}
+}
+.currentPriceBox,
+.oldPriceBox {
+	@apply flex items-end gap-5;
+}
+.price {
+	@apply font-semibold whitespace-nowrap;
+}
+.price,
+.newPrice,
+.oldPrice {
+	@apply text-2lg;
+}
+.newPrice {
+	@apply flex flex-wrap whitespace-nowrap;
+}
+.piecePrice {
+	@apply text-md-plus text-gray-600 whitespace-nowrap;
+}
+.salePriceBox {
+	@apply flex flex-col items-start gap-0.5;
+}
+.newPriceBox {
+	@apply flex items-end gap-2.5;
+
+	.piecePrice {
+		@apply text-red-400;
+	}
+}
+.newPrice {
+	@apply flex items-center gap-2 text-red-400 font-semibold;
+}
+.salePercent {
+	@apply bg-red-400 rounded-sm py-0.5 px-1 text-sm text-white;
+}
+.oldPrice {
+	@apply font-semibold text-gray-500 line-through whitespace-nowrap;
+}
+.tags {
+	@apply absolute top-0 left-0 flex gap-3;
+}
+.name {
+	@apply font-roboto-serif text-gray-600 text-2lg;
+}
+.sizes {
+	@apply w-full flex flex-wrap gap-1.5;
+	max-width: 174px;
+}
+.sizeBtn {
+	@apply font-roboto-serif text-sm-minus flex items-center justify-center p-0.5 rounded-full transition-colors;
+	width: 30px;
+	height: 30px;
+
+	&:hover,
+	&.picked {
+		@apply bg-gray-200;
+	}
+}
+.colors {
+	@apply w-full flex flex-wrap gap-1.5;
+	max-width: 174px;
+}
+.colorBtn {
+	@apply font-roboto-serif text-sm-minus flex items-center rounded-full transition-colors p-1.5;
+	width: 30px;
+	height: 30px;
+
+	&:hover,
+	&.picked {
+		@apply bg-gray-200;
+	}
+
+	> span {
+		@apply inline-block w-full h-full rounded-full;
+	}
+}
+.buttons {
+	@apply flex gap-2.5 min-w-fit;
+}
+.quantity {
+	@apply flex rounded-md bg-gray-200;
+}
+.quantityBtn {
+	@apply h-full w-6 flex items-center justify-center font-light font-roboto-serif px-1.5;
+
+	> svg {
+		@apply transition-colors;
+	}
+
+	&:first-child {
+		@apply rounded-tl-md rounded-bl-md;
+	}
+
+	&:last-child {
+		@apply rounded-tr-md rounded-br-md;
+	}
+
+	&:hover {
+		> svg {
+			@apply text-red-400;
+		}
+	}
+}
+.quantityCount {
+	@apply flex h-full items-center justify-center w-5;
+}
+.link,
+.favorite,
+.quantity {
+	@apply h-9;
+}
+.link,
+.favorite {
+	@apply flex items-center justify-center p-1 rounded-full bg-gray-200 up-hover aspect-square;
+
+	> svg {
+		width: 23px;
+		height: 23px;
+	}
+}
+.addToCart {
+	@apply w-full uppercase flex items-center justify-center gap-1.5 font-light font-roboto-serif px-5 rounded-md bg-gray-200 up-hover;
+	max-width: 215px;
+
+	> svg {
+		@apply w-4 h-4;
+	}
+}
+.removeFromCart {
+	@apply items-center;
+}
+
+@media (max-width: 1700px) {
+	.buttons {
+		@apply flex-wrap justify-center;
+		min-width: 165px;
+	}
+	.addToCart {
+		@apply py-2;
+	}
+	.name {
+		@apply text-lg;
+	}
+	.left {
+		min-width: 400px;
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.price,
+	.newPrice,
+	.oldPrice {
+		@apply text-lg;
+	}
+	.newPrice {
+		@apply gap-1;
+	}
+	.salePriceBox {
+		@apply gap-1.5;
+	}
+	.preview {
+		min-width: 150px;
+		min-height: 150px;
+		max-width: 150px;
+		max-height: 150px;
+	}
+	.images {
+		height: 170px;
+
+		& > div:first-child {
+			max-height: 150px;
+		}
+	}
+	.newPriceBox,
+	.oldPriceBox {
+		@apply flex-col items-start gap-1;
+	}
+}
+
+@media (max-width: 1100px) {
+	.center {
+		@apply flex-wrap gap-2;
+	}
+	.colors,
+	.sizes {
+		@apply max-w-full justify-center;
+	}
+	.price,
+	.newPrice,
+	.oldPrice {
+		font-size: 17px;
+	}
+	.salePriceBox {
+		@apply flex-row;
+	}
+}
+
+@media (max-width: 1000px) {
+	.item {
+		@apply flex-wrap;
+	}
+	.left {
+		max-width: calc(65% - 10px);
+		min-width: calc(65% - 10px);
+	}
+	.center {
+		@apply mx-0;
+		max-width: calc(35% - 10px);
+		min-width: calc(35% - 10px);
+	}
+	.buttons {
+		@apply min-w-full;
+	}
+}
+
+@media (max-width: 800px) {
+	.item {
+		@apply flex-col items-start;
+	}
+	.left,
+	.center {
+		max-width: 100%;
+		min-width: 100%;
+	}
+	.colors,
+	.sizes,
+	.center,
+	.buttons {
+		@apply justify-start;
+	}
+	.leftFill {
+		@apply gap-6;
+	}
+	.name {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 550px) {
+	.images {
+		height: 150px;
+
+		& > div:first-child {
+			max-height: 130px;
+		}
+	}
+	.preview {
+		min-width: 130px;
+		min-height: 130px;
+		max-width: 130px;
+		max-height: 130px;
+	}
+	.leftFill {
+		@apply gap-4;
+	}
+	.name {
+		@apply text-base;
+	}
+}
+
+@media (max-width: 500px) {
+	.leftFill {
+		@apply flex-col items-start relative;
+	}
+	.tags {
+		@apply static;
+	}
+	.info {
+		@apply flex-col items-start gap-1;
+	}
+}

@@ -1,0 +1,5 @@
+query CollectionById($id: Int!) {
+	collectionById(id: $id) {
+		name
+	}
+}

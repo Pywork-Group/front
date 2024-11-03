@@ -1,0 +1,3 @@
+mutation EditFileOrFolderName($data: EditFileOrFolderNameInput!) {
+	editFileOrFolderName(data: $data)
+}

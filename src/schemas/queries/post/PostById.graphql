@@ -1,0 +1,13 @@
+query PostById($id: Int!) {
+	postById(id: $id) {
+		name
+		excerpt
+		description
+		poster
+		bigPoster
+		rubrics {
+			id
+			name
+		}
+	}
+}

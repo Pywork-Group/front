@@ -1,0 +1,5 @@
+mutation DuplicateTag($id: Int!) {
+	duplicateTag(id: $id) {
+		id
+	}
+}

@@ -1,0 +1,5 @@
+mutation UpdateType($id: Int!, $data: TypeInput!) {
+	updateType(id: $id, data: $data) {
+		id
+	}
+}

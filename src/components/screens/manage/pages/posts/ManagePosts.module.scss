@@ -1,0 +1,7 @@
+.posts {
+	@apply flex flex-wrap gap-x-20 gap-y-8;
+}
+.post {
+	@apply w-full flex-col items-center justify-between;
+	max-width: calc(100% / 4 - 16px);
+}

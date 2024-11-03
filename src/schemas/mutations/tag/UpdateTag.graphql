@@ -1,0 +1,5 @@
+mutation UpdateTag($id: Int!, $data: TagInput!) {
+	updateTag(id: $id, data: $data) {
+		id
+	}
+}

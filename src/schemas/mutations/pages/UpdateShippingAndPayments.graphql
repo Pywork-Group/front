@@ -1,0 +1,8 @@
+mutation UpdateShippingAndPayment($data: ShippingAndPaymentInput!) {
+	updateShippingAndPayment(data: $data) {
+		shippingName
+		shippingContent
+		paymentName
+		paymentContent
+	}
+}

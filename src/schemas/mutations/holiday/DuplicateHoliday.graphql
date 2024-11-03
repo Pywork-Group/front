@@ -1,0 +1,5 @@
+mutation DuplicateHoliday($id: Int!) {
+	duplicateHoliday(id: $id) {
+		id
+	}
+}

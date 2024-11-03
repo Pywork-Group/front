@@ -1,0 +1,19 @@
+query GetFolderItems($folderPath: String!, $query: PaginationInput!) {
+	folderItems(folderPath: $folderPath, query: $query) {
+		folders {
+			name
+			size
+			count
+			path
+			createdAt
+		}
+		files {
+			name
+			size
+			extension
+			path
+			createdAt
+		}
+		count
+	}
+}

@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /manage/
+Disallow: /auth
+Disallow: /favorites
+
+Allow: /
+Allow: /about/
+Allow: /catalog/
+Allow: /category/
+Allow: /contacts
+Allow: /for-buyers
+Allow: /post/
+Allow: /posts
+Allow: /product/
+Allow: /shipping-and-payment
+
+Sitemap: https://скоропраздник.рф/sitemap.xml

@@ -1,0 +1,9 @@
+.about {
+	@apply pt-5 border-t border-gray-base flex items-start justify-between gap-16;
+}
+
+@media(max-width: 800px) {
+	.about {
+		@apply flex-col gap-5;
+	}
+}

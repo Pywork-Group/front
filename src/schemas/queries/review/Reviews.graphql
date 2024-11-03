@@ -1,0 +1,11 @@
+query Reviews($query: QueryInput!) {
+	reviews(query: $query) {
+		reviews {
+			id
+			author
+			content
+			photo
+		}
+		count
+	}
+}

@@ -1,0 +1,30 @@
+.container {
+	@apply w-full mx-auto;
+	padding: 0 25px;
+
+	&.extra {
+		max-width: 1910px;
+	}
+
+	&.lg {
+		max-width: 1800px;
+	}
+
+	&.md {
+		max-width: 1680px;
+	}
+
+	&.sm {
+		max-width: 1640px;
+	}
+
+	&.smallest {
+		max-width: 1515px;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		@apply px-4;
+	}
+}

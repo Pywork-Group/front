@@ -1,0 +1,20 @@
+.sizes {
+	@apply font-roboto-flex;
+}
+.title {
+	@apply font-semibold text-6lg mb-5;
+}
+.list {
+	@apply flex flex-wrap gap-5;
+}
+.itemBtn {
+	@apply flex items-center justify-center border border-solid border-gray-base rounded-full px-1 py-2 transition-colors;
+	font-size: 17px;
+	width: 60px;
+	height: 60px;
+
+	&:hover,
+	&.picked {
+		@apply bg-gray-200;
+	}
+}

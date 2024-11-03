@@ -1,0 +1,5 @@
+query HolidayById($id: Int!) {
+	holidayById(id: $id) {
+		name
+	}
+}

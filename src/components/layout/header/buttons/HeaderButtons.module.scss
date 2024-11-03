@@ -1,0 +1,65 @@
+.list {
+	@apply flex gap-3.5;
+}
+.favorites,
+.link,
+.cart {
+	@apply flex flex-col justify-between items-center text-sm-plus up-hover;
+}
+.cart,
+.favorites {
+	@apply relative;
+
+	> span {
+		@apply absolute right-0 top-0 min-w-3 aspect-square flex items-center justify-center gap-0.5 bg-red-400 rounded-full font-semibold font-roboto-flex text-white;
+	}
+}
+.burger {
+	@apply hidden transition-colors hover:text-red-400;
+
+	> svg {
+		height: 31px;
+		width: 31px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.list {
+		@apply gap-2.5;
+	}
+	.link,
+	.favorites,
+	.cart {
+		@apply text-sm;
+
+		> img {
+			max-width: 30px;
+			max-height: 30px;
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.burger {
+		@apply block ml-4;
+	}
+}
+
+@media(max-width: 500px) {
+	.link,
+	.cart,
+	.favorites {
+		> img {
+			max-width: 28px;
+			max-height: 28px;
+		}
+	}
+	.burger {
+		@apply ml-1;
+
+		> svg {
+			height: 29px;
+			width: 29px;
+		}
+	}
+}

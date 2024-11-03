@@ -1,0 +1,67 @@
+.wrapper {
+	@apply fixed z-5 top-0 bottom-0 right-0 left-0 h-screen w-screen bg-white overflow-x-hidden overflow-y-auto;
+	animation: slideWrapper 500ms ease-in-out;
+	padding: 50px 25px 60px;
+	scrollbar-color: #c22d1b rgba(255, 255, 255, 0.56);
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		@apply w-2 rounded-lg;
+	}
+
+	&::-webkit-scrollbar-track {
+		@apply w-full rounded-lg;
+		background-color: rgba(255, 255, 255, 0.56);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply w-full bg-red-400 rounded-lg;
+	}
+}
+.fill {
+	@apply mx-auto w-full;
+	max-width: 950px;
+}
+.close {
+	@apply absolute flex items-center justify-center;
+	top: 50px;
+	right: 60px;
+	width: 30px;
+	height: 30px;
+
+	> span {
+		@apply absolute w-full bg-gray-base rounded-full;
+		height: 2px;
+
+		&:first-child {
+			@apply rotate-45;
+		}
+
+		&:last-child {
+			@apply -rotate-45;
+		}
+	}
+}
+
+@keyframes slideWrapper {
+	0% {
+		opacity: 0;
+		transform: translateY(-140%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@media (max-width: 1200px) {
+	.close {
+		right: 25px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.close {
+		@apply w-6 h-6;
+	}
+}

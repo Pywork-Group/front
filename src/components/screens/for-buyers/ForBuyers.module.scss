@@ -1,0 +1,55 @@
+.wrapper {
+	@apply flex flex-col gap-10 py-16;
+}
+.title {
+	@apply font-medium text-3lg mb-5;
+}
+.content {
+	@apply flex flex-col gap-3 leading-sm-plus;
+
+	ul,
+	ol {
+		@apply pl-5 flex flex-col gap-3;
+
+		> li {
+			@apply list-item;
+		}
+	}
+
+	ul {
+		@apply list-disc;
+
+		> li {
+			@apply list-disc;
+		}
+	}
+
+	ol {
+		@apply list-decimal;
+
+		> li {
+			@apply list-decimal;
+		}
+	}
+
+	a {
+		@apply font-bold;
+	}
+}
+
+@media(max-width: 550px) {
+	.wrapper {
+		@apply gap-6 py-12;
+	}
+	.title {
+		@apply text-2lg mb-4;
+	}
+	.content {
+		@apply gap-2 text-md-plus;
+
+		ul,
+		ol {
+			@apply pl-3.5 gap-2;
+		}
+	}
+}

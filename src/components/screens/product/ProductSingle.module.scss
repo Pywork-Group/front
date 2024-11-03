@@ -1,0 +1,29 @@
+.product {
+	@apply mb-24;
+}
+.wrapper {
+	@apply pt-5;
+}
+.back {
+	@apply mx-auto flex items-center gap-2 rounded-md bg-red-400 text-white px-6 py-2 font-semibold font-roboto-flex text-2lg up-hover;
+
+	> svg {
+		@apply w-8 h-8;
+	}
+}
+
+@media (max-width: 1400px) {
+	.back {
+		@apply px-5 text-lg;
+
+		> svg {
+			@apply w-7 h-7;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.product {
+		@apply mb-10;
+	}
+}

@@ -1,0 +1,8 @@
+query ShippingAndPayment {
+	shippingAndPayment {
+		shippingName
+		shippingContent
+		paymentName
+		paymentContent
+	}
+}

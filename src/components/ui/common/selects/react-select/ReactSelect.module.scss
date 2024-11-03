@@ -1,0 +1,16 @@
+.selectContainer {
+	@apply w-full relative z-2 flex flex-col gap-1;
+}
+.error {
+	@apply font-light text-md-minus text-red-300;
+}
+.label {
+	@apply text-md;
+}
+.color {
+	@apply w-4 h-4 rounded-sm;
+}
+.jsx {
+	@apply flex items-center gap-2;
+}
+

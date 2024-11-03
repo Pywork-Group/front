@@ -1,0 +1,5 @@
+mutation UpdateCharacteristic($id: Int!, $data: CharacteristicInput!) {
+	updateCharacteristic(id: $id, data: $data) {
+		id
+	}
+}

@@ -1,0 +1,6 @@
+query PageSeo($type: PageType!) {
+	pageSeo(type: $type) {
+		title
+		description
+	}
+}

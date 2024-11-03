@@ -1,0 +1,22 @@
+.header {
+	@apply flex justify-between gap-10 pr-12;
+}
+.left {
+	@apply flex items-center;
+}
+.right {
+	@apply flex items-center gap-5;
+}
+
+@media(max-width: 1600px) {
+	.header {
+		@apply gap-5 pr-10;
+	}
+}
+
+@media(max-width: 500px) {
+	.header {
+		@apply pr-5 gap-4;
+	}
+}
+

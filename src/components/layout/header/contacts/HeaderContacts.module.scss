@@ -1,0 +1,62 @@
+.list {
+	@apply flex items-center gap-3 font-light;
+}
+.call {
+	@apply flex items-center gap-1;
+}
+.link,
+.call {
+	@apply underline-hover;
+}
+
+@media (max-width: 1500px) {
+	.link,
+	.call {
+		@apply text-md-plus;
+	}
+}
+
+@media (max-width: 800px) {
+	.link,
+	.call {
+		@apply text-md;
+
+		&::after {
+			@apply content-none;
+		}
+	}
+	.call {
+		> img {
+			@apply hidden;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.list {
+		@apply hidden;
+	}
+	
+	/* .list {
+		@apply absolute right-0 w-full top-20 z-5 justify-center text-white;
+	}
+
+	.link,
+	.call {
+		&::after {
+			content: '';
+		}
+	}
+
+	.call {
+		> img {
+			@apply block w-4 h-4;
+		}
+	} */
+}
+
+@media (max-width: 400px) {
+	.list {
+		@apply top-16;
+	}
+}

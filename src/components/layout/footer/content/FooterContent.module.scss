@@ -1,0 +1,146 @@
+.content {
+	padding: 34px 0 44px 0;
+}
+.fill {
+	@apply flex items-start justify-between gap-10;
+}
+.left {
+	@apply w-full flex items-start justify-between gap-10;
+	max-width: 925px;
+}
+.title {
+	@apply text-3lg font-semibold mb-5;
+}
+.list {
+	@apply flex flex-col items-start gap-3;
+}
+.link {
+	@apply text-2lg font-light underline-hover;
+}
+.phone {
+	@apply text-red-400 text-3lg font-bold font-roboto-flex mb-6 underline-hover;
+
+	&:after {
+		@apply bg-red-400;
+	}
+}
+.workdays {
+	@apply font-semibold mb-8;
+}
+.cards {
+	@apply flex items-center justify-between gap-2;
+
+	> li {
+		@apply up-hover;
+	}
+}
+
+@media (max-width: 1600px) {
+	.title,
+	.phone {
+		@apply mb-4;
+		font-size: 21px;
+	}
+	.link {
+		@apply text-lg;
+	}
+}
+
+@media (max-width: 1350px) {
+	.title,
+	.phone {
+		@apply mb-3 text-2lg;
+	}
+	.link {
+		font-size: 17px;
+	}
+	.workdays {
+		@apply mb-5;
+	}
+	.left {
+		max-width: 750px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.title,
+	.phone {
+		@apply mb-2.5 text-lg;
+	}
+	.link {
+		@apply text-md-plus;
+	}
+	.workdays {
+		@apply mb-4;
+	}
+	.left {
+		max-width: 590px;
+	}
+	.cards {
+		@apply gap-1;
+
+		> li {
+			> img {
+				max-width: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.content {
+		padding: 30px 0 35px 0;
+	}
+	.fill {
+		@apply flex-wrap gap-6;
+	}
+	.left {
+		@apply max-w-full;
+	}
+	.phone {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 600px) {
+	.fill {
+		@apply gap-5;
+	}
+	.left {
+		@apply flex-col items-start gap-5;
+	}
+}
+
+@media (max-width: 500px) {
+	.title {
+		font-size: 17px;
+	}
+	.title,
+	.phone {
+		@apply mb-2;
+	}
+	.link {
+		@apply text-md;
+	}
+	.list {
+		@apply gap-2;
+	}
+	.phone {
+		@apply text-base;
+	}
+	.workdays {
+		@apply text-md-plus mb-3;
+	}
+	.cards {
+		@apply gap-0.5;
+
+		> li {
+			> img {
+				max-width: 50px;
+			}
+		}
+	}
+	.content {
+		padding: 25px 0 30px 0;
+	}
+}

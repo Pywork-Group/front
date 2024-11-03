@@ -1,0 +1,30 @@
+.footer {
+	@apply overflow-hidden;
+}
+.copyright {
+	@apply flex items-center justify-center gap-2.5 font-semibold text-center py-3 bg-red-400 text-white;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.map {
+	@apply w-full;
+	aspect-ratio: 4.4 / 1;
+}
+
+@media (max-width: 1200px) {
+	.copyright {
+		@apply text-md-plus;
+	}
+}
+
+@media (max-width: 900px) {
+	.map {
+		aspect-ratio: 3.5 / 1;
+	}
+}
+
+@media (max-width: 550px) {
+	.map {
+		aspect-ratio: 2 / 1;
+	}
+}

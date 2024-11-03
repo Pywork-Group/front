@@ -1,0 +1,20 @@
+.burger {
+	@apply fixed z-5 left-0 top-0 right-0 bottom-0 w-screen h-screen bg-white animate-slideFromLeft hidden;
+}
+.wrapper {
+	@apply w-full h-full pt-8 pb-5 px-5 flex flex-col items-start;
+}
+.close {
+	@apply absolute transition-colors hover:text-red-400;
+	right: 25px;
+	top: 20px;
+}
+.fill {
+	@apply mt-auto;
+}
+
+@media (max-width: 1350px) {
+	.burger {
+		@apply block;
+	}
+}

@@ -1,0 +1,6 @@
+query CharacteristicById($id: Int!) {
+	characteristicById(id: $id) {
+		name
+		type
+	}
+}

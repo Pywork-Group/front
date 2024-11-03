@@ -1,0 +1,6 @@
+mutation UpdateAbout($data: AboutInput!) {
+	updateAbout(data: $data) {
+		name
+		content
+	}
+}

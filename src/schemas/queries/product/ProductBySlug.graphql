@@ -1,0 +1,85 @@
+query ProductBySlug($slug: String!) {
+	productBySlug(slug: $slug) {
+		product {
+			id
+			name
+			slug
+			sku
+			iconPath
+			description
+			packageQuantity
+			price
+			oldPrice
+			views
+			boughtTimes
+			images
+			categories {
+				name
+				slug
+				imagePath
+				parent {
+					name
+					slug
+					parent {
+						name
+						slug
+						parent {
+							name
+							slug
+							parent {
+								name
+								slug
+							}
+						}
+					}
+				}
+			}
+			sizes {
+				size
+				price
+				oldPrice
+			}
+			colors {
+				color
+				images
+			}
+			types {
+				iconPath
+			}
+			characteristics {
+				name
+				type
+			}
+			status
+			createdAt
+		}
+		similarProducts {
+			id
+			name
+			slug
+			sku
+			iconPath
+			description
+			packageQuantity
+			price
+			oldPrice
+			views
+			boughtTimes
+			images
+			sizes {
+				size
+				price
+				oldPrice
+			}
+			colors {
+				color
+				images
+			}
+			types {
+				iconPath
+			}
+			status
+			createdAt
+		}
+	}
+}

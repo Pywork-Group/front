@@ -1,0 +1,6 @@
+query ProductSeo($slug: String!) {
+	productSeo(slug: $slug) {
+		title
+		description
+	}
+}

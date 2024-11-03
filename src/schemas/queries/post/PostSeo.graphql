@@ -1,0 +1,6 @@
+query PostSeo($slug: String!) {
+	postSeo(slug: $slug) {
+		title
+		description
+	}
+}

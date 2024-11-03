@@ -1,0 +1,5 @@
+mutation TogglePost($id: Int!) {
+	togglePost(id: $id) {
+		id
+	}
+}

@@ -1,0 +1,5 @@
+mutation UpdateReview($id: Int!, $data: ReviewInput!) {
+	updateReview(id: $id, data: $data) {
+		id
+	}
+}

@@ -1,0 +1,5 @@
+mutation DuplicatePost($id: Int!) {
+	duplicatePost(id: $id) {
+		id
+	}
+}

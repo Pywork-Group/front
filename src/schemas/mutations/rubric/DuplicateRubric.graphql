@@ -1,0 +1,5 @@
+mutation DuplicateRubric($id: Int!) {
+	duplicateRubric(id: $id) {
+		id
+	}
+}

@@ -1,0 +1,5 @@
+mutation ToggleProduct($id: Int!) {
+	toggleProduct(id: $id) {
+		id
+	}
+}

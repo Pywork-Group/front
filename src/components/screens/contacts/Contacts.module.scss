@@ -1,0 +1,97 @@
+.wrapper {
+	@apply py-28;
+}
+.heading {
+	@apply font-bold text-6lg text-center mb-12;
+}
+.list {
+	@apply flex gap-10 justify-between;
+}
+.item {
+	@apply w-full text-center flex flex-col items-center;
+	max-width: 320px;
+}
+.circle {
+	@apply w-20 h-20 rounded-full bg-red-400 text-white flex items-center justify-center mb-3;
+
+	> svg {
+		@apply w-9 h-9;
+		stroke-width: 1.6px;
+	}
+}
+.name {
+	@apply font-semibold text-2lg mb-4;
+}
+.content {
+	@apply leading-sm-plus;
+
+	a {
+		@apply text-red-400 font-semibold underline-hover;
+
+		&:after {
+			@apply bg-red-400;
+		}
+	}
+}
+
+@media (max-width: 1500px) {
+	.heading {
+		@apply text-5lg mb-8;
+	}
+	.wrapper {
+		@apply py-20;
+	}
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+		@apply py-16;
+	}
+	.item {
+		max-width: 280px;
+	}
+	.circle {
+		@apply w-16 h-16 mb-2;
+
+		> svg {
+			@apply w-7 h-7;
+		}
+	}
+	.name {
+		@apply text-lg mb-3;
+	}
+	.list {
+		@apply gap-6;
+	}
+	.content {
+		@apply text-md-plus;
+	}
+}
+
+@media (max-width: 700px) {
+	.list {
+		@apply flex-col items-center gap-8;
+	}
+	.item {
+		@apply max-w-full;
+	}
+	.heading {
+		@apply text-3lg mb-5;
+	}
+	.wrapper {
+		@apply py-12;
+	}
+	.circle {
+		@apply w-14 h-14;
+
+		> svg {
+			@apply w-6 h-6;
+		}
+	}
+	.name {
+		@apply mb-2;
+	}
+	.list {
+		@apply gap-5;
+	}
+}

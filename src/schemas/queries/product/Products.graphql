@@ -1,0 +1,33 @@
+query Products($query: QueryProductInput!, $isPopular: Boolean) {
+	products(query: $query, isPopular: $isPopular) {
+		products {
+			id
+			name
+			slug
+			sku
+			iconPath
+			description
+			packageQuantity
+			price
+			oldPrice
+			views
+			boughtTimes
+			images
+			sizes {
+				size
+				price
+				oldPrice
+			}
+			colors {
+				color
+				images
+			}
+			types {
+				iconPath
+			}
+			status
+			createdAt
+		}
+		count
+	}
+}

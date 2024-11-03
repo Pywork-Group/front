@@ -1,0 +1,55 @@
+.overlay {
+	@apply w-screen h-screen fixed z-5 top-0 bottom-0 left-0 right-0 bg-black/75 flex justify-center items-center duration-500 invisible opacity-0;
+	animation-name: overlayFade;
+	animation-fill-mode: forwards;
+	animation-duration: 700ms;
+}
+.window {
+	@apply relative rounded-sm bg-white duration-700 opacity-0 py-12 px-10;
+	margin: 0 25px;
+	animation-name: windowTransform;
+	animation-fill-mode: forwards;
+	animation-duration: 700ms;
+	max-height: 90vh;
+}
+.close {
+	@apply absolute z-1 right-6 top-6;
+
+	> svg {
+		@apply w-4 h-4 text-gray-600/90;
+		stroke-width: 3px;
+	}
+}
+
+@keyframes windowTransform {
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes overlayFade {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 600px) {
+	.window {
+		@apply px-5 pt-8 pb-6;
+	}
+	.close {
+		@apply right-4 top-4;
+	}
+}

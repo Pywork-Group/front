@@ -1,0 +1,56 @@
+.buttons {
+	@apply flex gap-3;
+}
+.quantity {
+	@apply px-2 text-3lg font-light rounded-lg;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	height: 60px;
+
+	> button {
+		@apply w-10 h-7 px-3;
+	}
+}
+.cart {
+	@apply gap-5 font-light text-3lg rounded-lg;
+}
+
+@media(max-width: 1400px) {
+	.quantity {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		height: 50px;
+		font-size: 22px;
+	}
+	.cart {
+		@apply gap-4;
+		font-size: 20px;
+
+		> img {
+			@apply w-6 h-6;
+		}
+	}
+}
+
+@media(max-width: 800px) {
+	.quantity {
+		padding-top: 10px;
+    padding-bottom: 15px;
+    height: 44px;
+    font-size: 19px;
+	}
+	.cart {
+		@apply gap-3.5;
+		font-size: 19px;
+
+		> img {
+			@apply w-5 h-5;
+		}
+	}
+}
+
+@media(max-width: 430px) {
+	.buttons {
+		@apply flex-col items-start;
+	}
+}

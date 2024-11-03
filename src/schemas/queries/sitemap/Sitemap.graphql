@@ -1,0 +1,7 @@
+query Sitemap {
+	sitemap {
+		categoriesSlugs
+		productsSlugs
+		postsSlugs
+	}
+}

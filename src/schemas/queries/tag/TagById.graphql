@@ -1,0 +1,6 @@
+query TagById($id: Int!) {
+	tagById(id: $id) {
+		name
+		imagePath
+	}
+}

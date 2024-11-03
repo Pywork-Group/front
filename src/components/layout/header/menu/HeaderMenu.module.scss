@@ -1,0 +1,39 @@
+.nav {
+	margin-left: 70px;
+}
+.list {
+	@apply flex items-center gap-10;
+}
+.link {
+	@apply font-light underline-hover;
+}
+
+@media (max-width: 1600px) {
+	.nav {
+		margin-left: 50px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.list {
+		@apply gap-7;
+	}
+	.link {
+		@apply text-md-plus;
+	}
+}
+
+@media (max-width: 1350px) {
+	.nav.main {
+		@apply hidden;
+	}
+	.nav {
+		@apply m-0;
+	}
+	.list {
+		@apply flex-col items-start gap-5;
+	}
+	.link {
+		@apply text-base;
+	}
+}

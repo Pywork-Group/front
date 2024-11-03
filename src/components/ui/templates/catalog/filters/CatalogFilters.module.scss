@@ -1,0 +1,170 @@
+.wrapper {
+	@apply relative flex flex-col gap-5;
+}
+.close {
+	@apply hidden absolute right-5 top-4 transition-colors hover:text-red-400;
+}
+.button {
+	@apply flex items-center gap-3 font-roboto-flex text-lg;
+
+	> svg {
+		@apply w-4 h-4 fill-red-400 stroke-red-400 transition-all;
+
+		&.rotated {
+			@apply rotate-180;
+		}
+	}
+}
+.inner {
+	@apply mt-2.5 animate-fade;
+}
+.label {
+	@apply flex items-center gap-3;
+}
+.search {
+	@apply relative pl-3 pr-9 py-2 rounded-full bg-gray-300 font-roboto-flex text-md-minus;
+
+	> svg {
+		@apply absolute my-auto top-0 bottom-0 right-3 w-4 h-4 stroke-black;
+	}
+
+	> input {
+		@apply bg-transparent;
+		color: #717171;
+
+		&::placeholder {
+			color: #717171;
+		}
+	}
+}
+.types {
+	@apply mt-2.5 flex flex-wrap gap-x-1 gap-y-1.5;
+}
+.typeBtn {
+	@apply up-hover;
+
+	> img {
+		@apply max-w-fit max-h-fit;
+	}
+}
+.list {
+	@apply mt-2.5 flex flex-col items-start gap-1.5 text-md-minus font-roboto-flex overflow-x-hidden overflow-y-auto;
+	max-height: 245px;
+	scrollbar-color: #e51314 #d9d9d9;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		@apply w-2 rounded-lg;
+	}
+
+	&::-webkit-scrollbar-track {
+		@apply w-full bg-gray-300 rounded-lg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply w-full bg-red-400 rounded-lg;
+	}
+}
+.itemBtn {
+	@apply flex items-center;
+
+	&:hover {
+		.checkbox {
+			@apply bg-red-400;
+
+			& > span {
+				@apply bg-white;
+			}
+		}
+	}
+}
+.checkbox {
+	@apply w-5 h-5 rounded-sm bg-gray-300 flex relative mr-3 transition-colors;
+
+	> span {
+		@apply absolute left-0 right-0 top-0 bottom-0 m-auto w-2 h-2 rounded-full bg-transparent transition-colors;
+	}
+
+	&.picked {
+		@apply bg-red-400;
+
+		& > span {
+			@apply bg-white;
+		}
+	}
+}
+.count {
+	@apply block ml-1.5;
+	color: #717171;
+}
+.colorCircle {
+	@apply block w-5 h-5 rounded-full;
+}
+.ranges {
+	@apply relative h-5;
+}
+.range {
+	@apply absolute w-full h-0.5 pointer-events-none appearance-none bg-red-400;
+	-webkit-appearance: none;
+
+	&:first-child {
+		@apply z-1 h-0;
+	}
+
+	&:last-child {
+		margin-top: -1px;
+	}
+
+	&::-webkit-slider-thumb,
+	&::-moz-range-thumb {
+		@apply w-2 h-2 bg-white cursor-pointer rounded-full border-8 border-red-400;
+		-webkit-appearance: none;
+		pointer-events: all;
+	}
+}
+.fields {
+	@apply flex gap-2.5 overflow-hidden;
+}
+.field {
+	@apply w-full flex items-center gap-1 bg-gray-300 rounded-sm-extra py-2 pl-7 pr-2 font-roboto-serif font-light text-md-minus;
+	color: #717171;
+
+	> input {
+		@apply w-full bg-transparent;
+	}
+}
+.priceInner {
+	@apply animate-fade mt-7;
+}
+
+@media(max-width: 1350px) {
+	.close {
+		@apply block;
+	}
+	.wrapper {
+		@apply gap-8;
+	}
+	.filter {
+		@apply w-full;
+		max-width: calc(50% - 16px);
+	}
+	.button {
+		font-size: 17px;
+	
+		> svg {
+			@apply w-3.5 h-3.5;
+		}
+	}
+}
+
+@media(max-width: 600px) {
+	.wrapper {
+		@apply gap-5;
+	}
+	.filter {
+		@apply max-w-full;
+	}
+	.button {
+		@apply text-base;
+	}
+}

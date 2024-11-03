@@ -1,0 +1,5 @@
+mutation DuplicateCollection($id: Int!) {
+	duplicateCollection(id: $id) {
+		id
+	}
+}

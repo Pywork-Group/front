@@ -1,0 +1,15 @@
+.section {
+	@apply pt-16 pb-24;
+}
+
+@media (max-width: 1500px) {
+	.section {
+		@apply pt-8 pb-20;
+	}
+}
+
+@media(max-width: 800px) {
+	.section {
+		@apply pt-2 pb-12;
+	}
+}

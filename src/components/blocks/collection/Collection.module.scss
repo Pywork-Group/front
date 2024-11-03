@@ -1,0 +1,65 @@
+.item {
+	@apply relative w-fit cursor-pointer up-hover;
+	padding: 50px 45px 36px 45px;
+}
+.card {
+	@apply bg-transparent mb-2 flex items-center;
+	border: 5px solid #707070;
+	height: 81px;
+	width: 280px;
+
+	> img {
+		@apply w-auto h-auto;
+	}
+}
+.name {
+	@apply uppercase font-roboto-serif font-semibold text-4lg text-gray-600 mx-auto;
+}
+.balloon,
+.mainImage,
+.decor {
+	@apply absolute;
+}
+.balloon {
+	@apply left-0;
+	top: 13px;
+}
+.mainImage {
+	right: 66px;
+	top: 29px;
+}
+.decor {
+	left: 54px;
+  top: 106px;
+}
+.link {
+	@apply w-fit ml-auto font-roboto-serif text-sm-plus pl-3 flex gap-1.5 items-center bg-gray-base/20 rounded-full left-hover;
+	height: 16px;
+
+	> div {
+		@apply h-full rounded-full bg-red-400 flex items-center justify-center aspect-square;
+	}
+}
+
+
+@media (max-width: 1050px) {
+	.item {
+		padding: 25px 12px 0px 27px;
+	}
+	.decor {
+		left: 29px;
+    top: 77px;
+		max-width: 100px;
+	}
+	.balloon {
+		max-width: 50px;
+	}
+	.card {
+		height: 65px;
+		width: 200px;
+	}
+	.name {
+		@apply ml-4;
+		font-size: 19px;
+	}
+}

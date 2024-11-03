@@ -1,0 +1,35 @@
+.logo {
+	@apply flex items-center gap-4;
+}
+.name {
+	@apply text-red-400 font-roboto-mono font-bold text-2lg;
+}
+.icon {
+	@apply bg-red-400;
+	padding: 5px;
+}
+
+@media(max-width: 1500px) {
+	.logo {
+		@apply gap-3;
+		max-width: 240px;
+	}
+	.name {
+		font-size: 17px;
+	}
+}
+
+@media(max-width: 500px) {
+	.logo {
+		max-width: 220px;
+	}
+}
+
+@media(max-width: 400px) {
+	.logo {
+		max-width: 160px;
+	}
+	.name {
+		@apply text-base;
+	}
+}

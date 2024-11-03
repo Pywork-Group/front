@@ -1,0 +1,5 @@
+mutation ToggleTag($id: Int!) {
+	toggleTag(id: $id) {
+		id
+	}
+}

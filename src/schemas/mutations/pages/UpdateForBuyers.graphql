@@ -1,0 +1,6 @@
+mutation UpdateForBuyers($data: ForBuyersInput!) {
+	updateForBuyers(data: $data) {
+		name
+		content
+	}
+}

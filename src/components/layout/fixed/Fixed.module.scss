@@ -1,0 +1,10 @@
+.fixed {
+	@apply right-4 bottom-5 z-4;
+	position: fixed;
+}
+
+@media(max-width: 600px) {
+	.fixed {
+		@apply right-3 bottom-3;
+	}
+}

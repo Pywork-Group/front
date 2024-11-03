@@ -1,0 +1,15 @@
+.field {
+	@apply w-full flex flex-col gap-1;
+}
+.label {
+	@apply text-md-minus text-white;
+}
+.error {
+	@apply font-light text-sm;
+}
+.errorWhite {
+	@apply text-white;
+}
+.errorRed {
+	@apply text-red-300;
+}

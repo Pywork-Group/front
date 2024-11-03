@@ -1,0 +1,10 @@
+query Rubrics($query: QueryInput!) {
+	rubrics(query: $query) {
+		rubrics {
+			id
+			name
+			slug
+		}
+		count
+	}
+}

@@ -1,0 +1,43 @@
+.form {
+	@apply flex flex-col gap-3 items-center;
+	min-width: 320px;
+}
+.modal {
+	> div {
+		@apply pt-16 pb-6 px-8;
+	}
+}
+.send {
+	@apply bg-red-400 py-3.5 px-8 text-md-plus text-white whitespace-nowrap rounded-md transition-all duration-200;
+
+	&:hover {
+		box-shadow: 0px 4px 10px #c22d1b;
+	}
+}
+.field {
+	@apply max-w-full;
+}
+
+@media (max-width: 1200px) {
+	.send {
+		@apply text-md;
+	}
+}
+
+@media (max-width: 900px) {
+	.send {
+		@apply text-sm-plus;
+	}
+}
+
+@media (max-width: 700px) {
+	.send {
+		@apply text-md;
+	}
+}
+
+@media (max-width: 400px) {
+	.form {
+		min-width: 250px;
+	}
+}

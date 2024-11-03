@@ -1,0 +1,5 @@
+mutation DuplicateType($id: Int!) {
+	duplicateType(id: $id) {
+		id
+	}
+}

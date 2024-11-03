@@ -1,0 +1,6 @@
+query CategorySeo($slug: String!) {
+	categorySeo(slug: $slug) {
+		title
+		description
+	}
+}

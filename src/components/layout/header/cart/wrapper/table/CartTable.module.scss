@@ -1,0 +1,177 @@
+.tableWrapper {
+	margin-bottom: 30px;
+}
+.content {
+	@apply w-full flex flex-col items-start gap-5 pb-5;
+}
+.heading {
+	@apply text-3lg font-semibold mb-12;
+}
+.total {
+	@apply w-full flex items-center justify-end border border-solid border-gray-300/40 border-l-0 border-r-0;
+	padding: 30px 0;
+}
+.totalText {
+	@apply w-full text-sm-plus text-gray-500 italic leading-snug flex items-center justify-between gap-5 pl-2;
+	max-width: 400px;
+
+	> svg {
+		@apply text-red-300 w-8 h-8;
+	}
+}
+.totalPrice {
+	@apply flex items-end gap-1 text-md;
+
+	> span {
+		@apply font-bold text-gray-base text-md-plus;
+	}
+}
+.items {
+	@apply w-full flex flex-col gap-8;
+}
+.item {
+	@apply flex items-center justify-between gap-5;
+}
+.header {
+	@apply w-full flex items-center justify-between gap-5;
+}
+.header > div {
+	@apply font-medium text-md-plus;
+}
+.items > div {
+	@apply text-md;
+}
+.name {
+	width: 40%;
+}
+.quantity,
+.price,
+.color,
+.size {
+	@apply text-center;
+	width: 15%;
+}
+.size,
+.color {
+	> span {
+		@apply mx-auto font-roboto-serif text-sm-minus flex items-center justify-center p-0.5 rounded-full transition-colors;
+		width: 30px;
+		height: 30px;
+	}
+}
+.size {
+	> span {
+		@apply bg-gray-200;
+	}
+}
+.remove {
+	@apply text-right;
+	width: 5%;
+}
+.quantityBox {
+	@apply w-fit mx-auto flex items-center bg-white border border-solid border-gray-300/40 rounded-full;
+}
+.quantityBtn {
+	@apply p-2;
+
+	> svg {
+		@apply w-4 h-4;
+	}
+}
+.quantityCount {
+	@apply px-2;
+}
+
+@media (max-width: 1000px) {
+	.heading {
+		@apply text-lg mb-8;
+	}
+	.header > div {
+		@apply font-medium text-md;
+	}
+	.content {
+		@apply gap-4;
+	}
+}
+
+@media (max-width: 700px) {
+	.size,
+	.color {
+		> span {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.total {
+		@apply flex-col items-start gap-4;
+	}
+	.totalText {
+		@apply pl-0;
+		max-width: 100%;
+	}
+	.totalPrice {
+		@apply mx-auto;
+	}
+	.items {
+		@apply flex-row items-stretch gap-8;
+	}
+	.content {
+		@apply flex-row items-stretch gap-10 mb-5 overflow-y-hidden overflow-x-auto;
+		scrollbar-color: #66676e rgba(255, 255, 255, 0.56);
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			@apply rounded-lg;
+			height: 3px;
+		}
+
+		&::-webkit-scrollbar-track {
+			@apply h-full rounded-lg;
+			background-color: rgba(255, 255, 255, 0.56);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			@apply h-full rounded-lg;
+			background-color: #66676e;
+		}
+	}
+	.header > div {
+		@apply flex items-center;
+	}
+	.item {
+		@apply border border-t-0 border-b-0 border-solid border-gray-300/40 px-4;
+	}
+	.name,
+	.color,
+	.size {
+		height: 30px;
+	}
+	.quantity {
+		height: 35px;
+	}
+	.price,
+	.term {
+		height: 18px;
+	}
+	.remove {
+		height: 30px;
+	}
+	.header {
+		@apply flex-col items-start max-w-fit;
+	}
+	.item {
+		@apply flex-col items-start;
+		min-width: 200px;
+		max-width: 200px;
+	}
+	.quantity,
+	.price,
+	.term,
+	.name,
+	.remove {
+		@apply w-full text-left flex;
+	}
+	.quantityBox {
+		@apply m-0;
+	}
+}

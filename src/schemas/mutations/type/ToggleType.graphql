@@ -1,0 +1,5 @@
+mutation ToggleType($id: Int!) {
+	toggleType(id: $id) {
+		id
+	}
+}

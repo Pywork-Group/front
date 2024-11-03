@@ -1,0 +1,16 @@
+query Orders($query: QueryInput!) {
+	orders(query: $query) {
+		orders {
+			id
+			status
+			total
+			name
+			phone
+			items {
+				quantity
+			}
+			createdAt
+		}
+		count
+	}
+}

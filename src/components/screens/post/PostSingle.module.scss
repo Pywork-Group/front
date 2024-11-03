@@ -1,0 +1,55 @@
+.wrapper {
+	@apply pt-10 pb-16;
+}
+.back {
+	@apply mx-auto flex items-center gap-2 rounded-md bg-red-400 text-white px-6 py-2 font-semibold font-roboto-flex text-2lg up-hover mb-8;
+
+	> svg {
+		@apply w-8 h-8;
+	}
+}
+.poster {
+	@apply w-full relative flex items-end p-8;
+	aspect-ratio: 3 / 1;
+
+	> img {
+		@apply rounded-t-lg image-like-bg-cover absolute left-0 top-0 bottom-0 right-0;
+	}
+}
+.terms {
+	@apply w-full flex flex-wrap items-stretch gap-1.5;
+}
+.rubric,
+.date {
+	@apply py-1.5 justify-center px-3 rounded-full text-white bg-red-400;
+	min-width: 160px;
+}
+.date {
+	@apply ml-auto;
+}
+.content {
+	@apply leading-sm-plus text-2lg p-8 border border-gray-300 rounded-b-lg;
+
+	p {
+		@apply my-2;
+	}
+
+	ul,
+	ol {
+		@apply pl-4;
+
+		> li {
+			@apply my-1;
+		}
+	}
+
+	ol,
+	ol > li {
+		@apply list-decimal;
+	}
+
+	ul,
+	ul > li {
+		@apply list-disc;
+	}
+}

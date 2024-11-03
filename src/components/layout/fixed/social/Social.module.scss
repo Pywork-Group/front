@@ -1,0 +1,19 @@
+.list {
+	@apply flex flex-col items-center gap-4 py-5 px-3 bg-white rounded-full;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.link {
+	@apply up-hover;
+}
+
+@media(max-width: 600px) {
+	.list {
+		@apply gap-3 py-4 px-3;
+	}
+	.link {
+		> img {
+			width: 25px;
+			height: 25px;
+		}
+	}
+}

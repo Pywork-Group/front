@@ -1,0 +1,14 @@
+query PostBySlug($slug: String!) {
+	postBySlug(slug: $slug) {
+		name
+		excerpt
+		description
+		poster
+		bigPoster
+		rubrics {
+			id
+			name
+		}
+		createdAt
+	}
+}

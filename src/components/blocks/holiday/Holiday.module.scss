@@ -1,0 +1,79 @@
+.item {
+	@apply relative w-fit cursor-pointer up-hover;
+	padding: 50px 45px 36px 45px;
+}
+.card {
+	@apply bg-transparent mb-2 flex items-center;
+	border: 5px solid #707070;
+	height: 81px;
+	width: 280px;
+
+	> img {
+		@apply w-auto h-auto;
+	}
+}
+.name {
+	@apply ml-6 uppercase font-roboto-serif font-semibold text-4lg text-gray-600;
+}
+.leftBalloon,
+.rightBalloon,
+.tree,
+.decor {
+	@apply absolute;
+}
+.leftBalloon {
+	@apply left-0;
+	top: 13px;
+}
+.rightBalloon {
+	@apply top-0;
+	right: 27px;
+}
+.tree {
+	right: 66px;
+	top: 29px;
+}
+.decor {
+	left: 44px;
+	top: 127px;
+}
+.link {
+	@apply w-fit ml-auto font-roboto-serif text-sm-plus pl-3 flex gap-1.5 items-center bg-gray-base/20 rounded-full left-hover;
+	height: 16px;
+
+	> div {
+		@apply h-full rounded-full bg-red-400 flex items-center justify-center aspect-square;
+	}
+}
+
+@media (max-width: 1050px) {
+	.item {
+		padding: 25px 12px 0px 27px;
+	}
+	.decor {
+		left: 27px;
+		top: 88px;
+	}
+	.card {
+		height: 65px;
+		width: 200px;
+
+		> img {
+			&:first-child {
+				max-width: 50px;
+			}
+			&:nth-child(2) {
+				@apply top-0 right-0;
+				max-width: 37px;
+			}
+		}
+	}
+	.tree {
+		right: 33px;
+		top: 25px;
+	}
+	.name {
+		@apply ml-4;
+		font-size: 19px;
+	}
+}

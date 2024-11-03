@@ -1,0 +1,38 @@
+.wrapper {
+	@apply relative w-full flex flex-col items-start gap-2 text-white;
+	max-width: 200px;
+}
+.select {
+	@apply w-full text-md-minus;
+}
+.label {
+	@apply text-md-minus text-gray-base;
+}
+.list {
+	@apply absolute top-full animate-fade flex flex-col w-full rounded-b-sm;
+}
+.item {
+	@apply bg-gray-800 transition-colors hover:bg-purple-400;
+
+	&:last-child {
+		@apply rounded-b-sm;
+	}
+}
+.button {
+	@apply w-full py-2 px-4;
+}
+.opener {
+	@apply w-full flex items-center gap-3 justify-between py-2 px-4 bg-gray-800 rounded-sm border border-solid border-gray-500/5 transition-all;
+
+	> svg {
+		@apply h-5 w-5 transition-transform;
+	}
+
+	&.active {
+		@apply rounded-b-none border-b-transparent;
+
+		> svg {
+			@apply rotate-180;
+		}
+	}
+}

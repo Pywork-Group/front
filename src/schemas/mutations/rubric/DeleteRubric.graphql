@@ -1,0 +1,5 @@
+mutation DeleteRubric($id: Int!) {
+	deleteRubric(id: $id) {
+		id
+	}
+}

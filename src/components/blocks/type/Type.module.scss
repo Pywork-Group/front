@@ -1,0 +1,11 @@
+.type {
+	@apply w-full border border-solid rounded-sm-extra px-5 py-8 flex flex-col items-center justify-between;
+}
+.wrapper {
+	@apply flex flex-col gap-3 items-center justify-center;
+}
+.icon {
+	@apply w-auto h-auto;
+	max-width: 40px;
+	max-height: 40px;
+}

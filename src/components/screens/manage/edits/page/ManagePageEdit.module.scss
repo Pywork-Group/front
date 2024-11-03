@@ -1,0 +1,26 @@
+.fill {
+	@apply w-full;
+}
+.block,
+.seo {
+	@apply w-full flex flex-col gap-1.5;
+}
+.block {
+	@apply mt-10;
+	counter-reset: section;
+}
+.object {
+	@apply animate-fade relative z-3 w-full flex flex-col items-center pt-24 px-5 pb-5 border border-solid border-gray-300 rounded-sm;
+
+	&::before {
+		@apply absolute top-7 mx-auto text-7lg font-bold;
+		counter-increment: section;
+		content: counter(section);
+	}
+}
+.objectFill {
+	@apply w-full flex flex-col gap-4;
+}
+.generalField {
+	@apply animate-fade;
+}

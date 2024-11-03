@@ -1,0 +1,9 @@
+.rubric {
+	@apply w-full border border-solid rounded-sm-extra p-5 flex flex-col items-center justify-between;
+}
+.wrapper {
+	@apply flex flex-col gap-3 items-center justify-between text-center;
+}
+.name {
+	@apply text-2lg font-medium;
+}

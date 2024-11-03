@@ -1,0 +1,117 @@
+.slider {
+	@apply relative w-full bg-gray-100 overflow-hidden;
+	min-width: 500px;
+}
+.swiper {
+	@apply h-full;
+}
+.dots {
+	@apply absolute left-0 right-0 flex items-end justify-center gap-6;
+	bottom: 23px;
+}
+.bullet {
+	@apply relative cursor-pointer z-1 transition-all;
+	background-color: #696969;
+	width: 85px;
+	height: 3px;
+
+	&:first-child::before {
+		content: 'Праздники';
+	}
+
+	&:last-child::before {
+		content: 'Коллекции';
+	}
+
+	&::before {
+		@apply absolute left-0 bottom-3 font-semibold transition-all;
+		color: #696969;
+	}
+
+	&:hover {
+		@apply bg-red-400;
+
+		&:before {
+			@apply text-red-400;
+		}
+	}
+}
+.bulletActive {
+	@apply bg-red-400;
+	height: 5px;
+
+	&:first-child {
+		width: 125px;
+	}
+
+	&:last-child {
+		width: 123px;
+	}
+
+	&::before {
+		@apply text-3lg text-gray-base;
+	}
+
+	&:hover {
+		@apply bg-red-400;
+
+		&::before {
+			@apply text-gray-base;
+		}
+	}
+}
+
+@media (max-width: 1700px) {
+	.slider {
+		height: 580px;
+		padding-bottom: 70px;
+	}
+	.dots {
+		bottom: 60px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.slider {
+		height: 470px;
+		padding-bottom: 70px;
+	}
+	.dots {
+		bottom: 60px;
+	}
+	.dots {
+		@apply gap-4;
+		bottom: 60px;
+	}
+	.bullet {
+		@apply text-md-plus;
+		width: 76px;
+		height: 2px;
+	}
+	.bulletActive {
+		height: 4px;
+
+		&:first-child {
+			width: 103px;
+		}
+
+		&:last-child {
+			width: 103px;
+		}
+
+		&::before {
+			@apply text-2lg text-gray-base;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.slider {
+		@apply min-w-full;
+		padding-bottom: 80px;
+		height: 475px;
+	}
+	.dots {
+		bottom: 90px;
+	}
+}

@@ -1,0 +1,64 @@
+.upload {
+	width: 520px;
+}
+.title {
+	@apply font-semibold text-lg mb-5;
+}
+.box {
+	@apply py-9 px-5 text-center border border-dashed border-gray-600/25 rounded-sm transition-colors;
+
+	&.dragged {
+		@apply border-gray-600;
+	}
+}
+.text {
+	> span {
+		@apply text-purple-400;
+	}
+}
+.uploaded {
+	@apply mt-9 animate-fade;
+}
+.subtitle {
+	@apply font-medium mb-5;
+}
+.files {
+	@apply flex flex-col gap-2 overflow-auto;
+	max-height: 205px;
+}
+.file {
+	@apply p-2 flex items-center justify-between gap-8 rounded-sm border border-solid border-gray-600/15 animate-fade;
+}
+.fileFill {
+	@apply flex items-center gap-3;
+}
+.fileName {
+	@apply font-medium text-md-minus;
+}
+.fileSize {
+	@apply text-sm-plus;
+}
+.delete {
+	@apply flex items-center justify-center p-2 rounded-full transition-colors bg-transparent;
+
+	> svg {
+		@apply w-4 h-4;
+	}
+
+	&:hover {
+		@apply bg-purple-400;
+
+		> svg {
+			@apply text-white;
+		}
+	}
+}
+.buttons {
+	@apply mt-6 flex items-center justify-end gap-3 text-md-minus font-medium;
+}
+.close {
+	@apply text-purple-400 transition-colors hover:text-purple-400/90;
+}
+.add {
+	@apply px-5 py-2 text-white bg-purple-400 transition-colors rounded-sm hover:bg-purple-400/90;
+}

@@ -1,0 +1,5 @@
+mutation DuplicateCharacteristic($id: Int!) {
+	duplicateCharacteristic(id: $id) {
+		id
+	}
+}

@@ -1,0 +1,152 @@
+.advantages {
+	@apply flex items-center justify-between gap-7 text-gray-800 mb-7;
+}
+.heading {
+	@apply hidden mb-8;
+}
+.menu {
+	min-width: 680px;
+}
+.menuName {
+	@apply font-medium text-7lg mb-4;
+}
+.list {
+	@apply flex items-start gap-7;
+}
+.info {
+	max-width: 925px;
+
+	> div {
+		max-width: 675px;
+	}
+}
+.item {
+	@apply text-center w-full flex flex-col items-center;
+	max-width: 255px;
+
+	&:first-child > img {
+		@apply mb-6;
+	}
+
+	&:nth-child(2) > img {
+		max-width: 80px;
+		max-height: 147px;
+	}
+}
+.itemName {
+	@apply relative text-lg pb-3 mb-2 w-full;
+	max-width: 130px;
+
+	&::after {
+		@apply absolute left-0 right-0 bottom-0 mx-auto w-4 h-0.5 bg-red-400;
+		content: '';
+	}
+}
+.itemDescription {
+	@apply text-md;
+}
+
+@media (max-width: 1500px) {
+	.menuName {
+		@apply text-6lg;
+	}
+	.item {
+		& > img {
+			max-width: 120px;
+		}
+
+		&:nth-child(2) > img {
+			max-width: 67px;
+			max-height: 120px;
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.menuName {
+		@apply text-5lg;
+	}
+}
+
+@media (max-width: 1200px) {
+	.section {
+		@apply pb-8;
+	}
+	.advantages {
+		@apply flex-col-reverse mb-0;
+	}
+	.menu {
+		@apply min-w-full;
+	}
+	.list {
+		@apply justify-between;
+	}
+	.item {
+		max-width: calc(100% / 3 - 19px);
+	}
+	.menuName {
+		@apply text-center;
+	}
+	.info,
+	.info > div {
+		@apply max-w-full;
+	}
+	.advantages {
+		@apply gap-10;
+	}
+}
+
+@media (max-width: 800px) {
+	.menuName {
+		@apply text-3lg;
+	}
+	.list {
+		@apply gap-5;
+	}
+	.item {
+		max-width: calc(33.3333333333% - 14px);
+	}
+	.itemName {
+		@apply text-base;
+	}
+	.itemDescription {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 600px) {
+	.heading {
+		@apply block;
+	}
+	.menuName {
+		@apply hidden;
+	}
+	.list {
+		@apply flex-col gap-6;
+	}
+	.item,
+	.itemName {
+		@apply max-w-full;
+	}
+	.item {
+		& > img {
+			max-width: 130px;
+		}
+	}
+	.item {
+		@apply max-w-full;
+	}
+	.advantages {
+		@apply gap-6;
+	}
+}
+
+@media (max-width: 400px) {
+	.item > img {
+		max-width: 110px;
+	}
+	.item:nth-child(2) > img {
+		max-width: 70px;
+		max-height: 120px;
+	}
+}

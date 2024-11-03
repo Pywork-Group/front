@@ -1,0 +1,5 @@
+mutation DeleteCharacteristic($id: Int!) {
+	deleteCharacteristic(id: $id) {
+		id
+	}
+}

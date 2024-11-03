@@ -1,0 +1,6 @@
+.categories {
+	@apply flex flex-wrap gap-5;
+}
+.category {
+	max-width: calc(100% / 5 - 16px);
+}

@@ -1,0 +1,5 @@
+mutation ToggleHoliday($id: Int!) {
+	toggleHoliday(id: $id) {
+		id
+	}
+}

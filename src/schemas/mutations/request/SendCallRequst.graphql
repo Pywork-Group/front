@@ -1,0 +1,3 @@
+mutation SendCallRequest($data: CallRequestInput!) {
+	sendCallRequest(data: $data)
+}

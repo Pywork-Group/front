@@ -1,0 +1,5 @@
+mutation CreateRubric {
+	createRubric {
+		id
+	}
+}

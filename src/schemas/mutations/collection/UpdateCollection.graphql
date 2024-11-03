@@ -1,0 +1,5 @@
+mutation UpdateCollection($id: Int!, $data: CollectionInput!) {
+	updateCollection(id: $id, data: $data) {
+		id
+	}
+}

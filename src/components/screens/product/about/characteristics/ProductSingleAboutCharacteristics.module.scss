@@ -1,0 +1,35 @@
+.characteristics {
+	@apply w-full;
+	max-width: 510px;
+}
+.title {
+	@apply font-semibold text-6lg mb-5;
+}
+.list {
+	@apply flex items-start justify-between flex-wrap gap-10;
+}
+.item {
+	@apply text-lg text-black flex items-start gap-1.5;
+	width: calc(50% - 20px);
+}
+.label {
+	@apply font-semibold;
+}
+.value {
+	@apply font-light flex items-center gap-2;
+}
+.colorCircle {
+	@apply block w-5 h-5 rounded-full;
+}
+
+@media (max-width: 1400px) {
+	.title {
+		font-size: 29px;
+	}
+}
+
+@media (max-width: 800px) {
+	.title {
+		font-size: 24px;
+	}
+}

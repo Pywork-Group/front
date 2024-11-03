@@ -1,0 +1,293 @@
+.cards {
+	@apply flex flex-col items-end justify-between pr-4;
+}
+.card {
+	@apply relative;
+	padding: 25px 55px 32px 0;
+
+	&:last-child {
+		.cardImage {
+			@apply w-auto h-auto absolute -bottom-8 right-2;
+		}
+	}
+}
+.cardInner {
+	@apply rounded-md py-6 px-3 font-roboto-serif font-medium;
+	background-color: #e6191a;
+	width: 265px;
+	height: 150px;
+}
+.cardInfo {
+	@apply flex flex-col items-end gap-1.5 -translate-x-1/2;
+}
+.cardName {
+	@apply text-red-400 text-2lg py-2 px-3 bg-white text-center;
+	min-width: 250px;
+}
+.cardLink {
+	@apply text-white underline underline-offset-4 pr-4 left-hover;
+}
+.cardImage {
+	@apply w-auto h-auto absolute bottom-2 right-0;
+}
+.popup {
+	> div {
+		@apply font-inter w-full rounded-md-extra p-0;
+		max-width: 1150px;
+		height: 600px;
+
+		> button {
+			@apply top-7 right-10;
+		}
+	}
+}
+.wrapper {
+	@apply h-full w-full flex gap-5;
+}
+.left {
+	@apply relative p-7 rounded-l-md-extra;
+	min-width: 600px;
+
+	> img {
+		@apply image-like-bg-cover absolute left-0 top-0 bottom-0 right-0 rounded-l-md-extra;
+	}
+}
+.leftFill {
+	@apply relative w-full h-full rounded-md-extra border-white p-6;
+	border-width: 3px;
+}
+.icon {
+	@apply flex items-center justify-center rounded-md bg-white;
+	width: 78px;
+	height: 78px;
+}
+.right {
+	@apply w-full pr-10 py-12 flex flex-col justify-center;
+}
+.title {
+	@apply relative font-semibold text-3lg text-red-400 pb-5 mb-5;
+
+	&::after {
+		@apply w-full absolute left-0 bottom-0 bg-red-400;
+		content: '';
+		max-width: 145px;
+		height: 2px;
+	}
+}
+.text {
+	@apply relative pb-6 mb-4;
+
+	&::after {
+		@apply w-full absolute left-0 bottom-0 bg-red-400;
+		content: '';
+		max-width: 320px;
+		height: 2px;
+	}
+}
+.bottom {
+	a {
+		@apply text-red-400;
+	}
+}
+
+@media (max-width: 1800px) {
+	.cardName {
+		@apply text-lg;
+		min-width: 200px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.title {
+		@apply pb-3 mb-3;
+		font-size: 19px;
+	}
+	.popup > div {
+		@apply min-h-fit gap-0;
+
+		> button {
+			@apply bg-white w-8 h-8 flex items-center justify-center rounded-full shadow-md right-4 top-4;
+		}
+	}
+	.text {
+		@apply pb-4 mb-3;
+	}
+	.icon {
+		width: 50px;
+		height: 50px;
+
+		> img {
+			width: 33px;
+		}
+	}
+	.left {
+		@apply p-4;
+		min-width: 400px;
+	}
+	.leftFill {
+		@apply p-4;
+	}
+	.right {
+		@apply px-6 py-6 overflow-x-hidden overflow-y-auto;
+		scrollbar-color: #66676e rgba(255, 255, 255, 0.56);
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			@apply w-1 rounded-lg;
+		}
+
+		&::-webkit-scrollbar-track {
+			@apply w-full bg-gray-400 rounded-lg;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			@apply w-full rounded-lg;
+			background-color: #66676e;
+		}
+	}
+	.text,
+	.bottom {
+		@apply text-md;
+	}
+	.cardInner {
+		width: 220px;
+		height: 140px;
+	}
+	.cardImage {
+		@apply bottom-7;
+		max-width: 150px;
+	}
+	.cardName {
+		@apply text-md-plus;
+		min-width: 165px;
+	}
+	.cardLink {
+		@apply text-md;
+	}
+}
+
+@media (max-width: 1050px) {
+	.cards {
+		@apply flex-row pr-0;
+	}
+	.card:last-child img {
+		@apply -bottom-1;
+	}
+	.card {
+		padding: 0px 13px 0px 0;
+
+		&:last-child {
+			.cardImage {
+				@apply bottom-0;
+			}
+		}
+	}
+	.cardImage {
+		@apply bottom-0;
+		max-width: 120px;
+	}
+}
+
+@media (max-width: 950px) {
+	.cards {
+		@apply flex-wrap justify-center;
+		column-gap: 70px;
+		row-gap: 20px;
+	}
+}
+
+@media (max-width: 900px) {
+	.popup > div {
+		@apply h-fit;
+		max-width: 450px;
+	}
+	.wrapper {
+		@apply flex-col gap-0;
+	}
+	.left {
+		@apply hidden;
+	}
+	.right {
+		@apply h-full pt-14;
+	}
+}
+
+@media (max-width: 800px) {
+	.left {
+		min-width: 250px;
+	}
+	.title {
+		font-size: 17px;
+	}
+	.text,
+	.bottom {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 700px) {
+	.popup > div {
+		@apply rounded-tr-md-extra;
+	}
+	.wrapper {
+		@apply flex-col;
+	}
+	.left > img {
+		@apply rounded-bl-none rounded-tr-md-extra;
+	}
+	.right {
+		@apply rounded-bl-md-extra;
+	}
+	.icon {
+		width: 40px;
+		height: 40px;
+
+		> img {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.cards {
+		@apply flex-col items-center;
+	}
+	.cardInner {
+		width: 250px;
+		height: 150px;
+	}
+	.cardImage {
+		@apply left-12 bottom-3;
+	}
+	.cardInfo {
+		@apply transform-none;
+	}
+	.cardName {
+		@apply w-full;
+	}
+	.card {
+		&:first-child {
+			.cardImage {
+				max-width: 70px;
+			}
+		}
+		&:nth-child(2) {
+			.cardImage {
+				max-width: 67px;
+			}
+		}
+		&:last-child {
+			.cardImage {
+				@apply bottom-2;
+				max-width: 80px;
+			}
+		}
+	}
+}
+
+@media(max-width: 550px) {
+	.title {
+		font-size: 16px;
+	}
+	.text {
+		font-size: 11px;
+	}
+}

@@ -1,0 +1,5 @@
+mutation DuplicateProduct($id: Int!) {
+	duplicateProduct(id: $id) {
+		id
+	}
+}

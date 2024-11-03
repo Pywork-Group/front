@@ -1,0 +1,41 @@
+.currentPriceBox,
+.oldPriceBox {
+	@apply flex items-end gap-7;
+}
+.price {
+	@apply font-semibold text-5lg;
+}
+.piecePrice {
+	@apply text-lg text-gray-600;
+}
+.salePriceBox {
+	@apply flex flex-col items-start gap-1.5;
+}
+.newPriceBox {
+	@apply flex items-end gap-4;
+
+	.piecePrice {
+		@apply text-red-400;
+	}
+}
+.newPrice {
+	@apply flex items-end gap-4 text-red-400 font-semibold text-5lg;
+}
+.salePercent {
+	@apply bg-red-400 rounded-sm py-0.5 px-1 text-base text-white;
+}
+.oldPrice {
+	@apply font-semibold text-gray-500 line-through text-5lg;
+}
+
+@media(max-width: 1400px) {
+	.price {
+		@apply text-4lg;
+	}
+}
+
+@media(max-width: 800px) {
+	.price {
+		font-size: 22px;
+	}
+}

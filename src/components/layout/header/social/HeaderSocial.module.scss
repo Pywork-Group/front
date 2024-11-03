@@ -1,0 +1,29 @@
+.list {
+	@apply flex items-center gap-4;
+	margin-left: 90px;
+}
+.link {
+	@apply up-hover;
+}
+
+@media (max-width: 1600px) {
+	.list {
+		margin-left: 50px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.link {
+		max-width: 25px;
+		max-height: 25px;
+	}
+}
+
+@media (max-width: 1350px) {
+	.list.main {
+		@apply hidden;
+	}
+	.list {
+		@apply m-0 my-5;
+	}
+}

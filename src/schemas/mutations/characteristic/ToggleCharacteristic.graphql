@@ -1,0 +1,5 @@
+mutation ToggleCharacteristic($id: Int!) {
+	toggleCharacteristic(id: $id) {
+		id
+	}
+}

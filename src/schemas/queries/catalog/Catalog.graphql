@@ -1,0 +1,153 @@
+query Catalog($data: CatalogInput!) {
+	catalog(data: $data) {
+		block {
+			heading
+			content
+		}
+		rootCategory {
+			name
+			slug
+			parent {
+				name
+				slug
+				parent {
+					name
+					slug
+					parent {
+						name
+						slug
+						parent {
+							name
+							slug
+							parent {
+								name
+								slug
+							}
+						}
+					}
+				}
+			}
+			categories {
+				name
+				slug
+				categories {
+					name
+					slug
+					categories {
+						name
+						slug
+						categories {
+							name
+							slug
+							categories {
+								name
+								slug
+							}
+						}
+					}
+				}
+			}
+		}
+		categories {
+			name
+			slug
+			imagePath
+			parent {
+				name
+				slug
+				parent {
+					name
+					slug
+					parent {
+						name
+						slug
+						parent {
+							name
+							slug
+						}
+					}
+				}
+			}
+		}
+		filters {
+			sizes {
+				label
+				value
+				count
+			}
+			colors {
+				label
+				value
+				count
+			}
+			hues {
+				label
+				value
+				count
+			}
+			types {
+				iconPath
+				uncheckedIconPath
+				value
+			}
+			manufacturers {
+				label
+				value
+				count
+			}
+			materials {
+				label
+				value
+				count
+			}
+			collections {
+				label
+				value
+				count
+			}
+			holidays {
+				label
+				value
+				count
+			}
+			countries {
+				label
+				value
+				count
+			}
+			price {
+				min
+				max
+			}
+		}
+		products {
+			id
+			name
+			slug
+			sku
+			iconPath
+			description
+			packageQuantity
+			price
+			oldPrice
+			views
+			boughtTimes
+			images
+			sizes {
+				size
+				price
+				oldPrice
+			}
+			colors {
+				color
+				images
+			}
+			types {
+				iconPath
+			}
+			status
+			createdAt
+		}
+		productsCount
+	}
+}

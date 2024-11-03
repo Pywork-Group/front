@@ -1,0 +1,17 @@
+.folder {
+	width: 520px;
+}
+.form {
+	@apply flex flex-col items-center;
+}
+.add {
+	@apply mx-auto mt-5 px-5 py-2 text-md text-white bg-purple-400 transition-colors rounded-sm hover:bg-purple-400/90;
+}
+.title {
+	@apply text-center font-semibold text-lg mb-5;
+}
+.field {
+	> input {
+		@apply border border-solid border-gray-300;
+	}
+}

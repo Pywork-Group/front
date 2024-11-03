@@ -1,0 +1,7 @@
+.reviews {
+	@apply pt-28 flex flex-wrap gap-x-10 gap-y-8;
+}
+.review {
+	@apply flex-col items-center justify-between;
+	max-width: calc(100% / 5 - 32px);
+}

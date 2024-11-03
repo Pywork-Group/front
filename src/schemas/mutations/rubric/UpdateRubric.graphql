@@ -1,0 +1,5 @@
+mutation UpdateRubric($id: Int!, $data: RubricInput!) {
+	updateRubric(id: $id, data: $data) {
+		id
+	}
+}

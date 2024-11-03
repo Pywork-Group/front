@@ -1,0 +1,10 @@
+query Collections($query: QueryInput!) {
+	collections(query: $query) {
+		collections {
+			id
+			name
+			slug
+		}
+		count
+	}
+}

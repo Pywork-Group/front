@@ -1,0 +1,22 @@
+query OrderById($id: Int!) {
+	orderById(id: $id) {
+		id
+		name
+		phone
+		total
+		items {
+			quantity
+			product {
+				id
+				name
+				slug
+				oldPrice
+				price
+				images
+			}
+			color
+			size
+		}
+		createdAt
+	}
+}

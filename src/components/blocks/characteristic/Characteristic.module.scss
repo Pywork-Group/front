@@ -1,0 +1,15 @@
+.characteristic {
+	@apply w-full border border-solid rounded-sm-extra p-5 flex flex-col items-center justify-between;
+}
+.wrapper {
+	@apply flex flex-col gap-3 items-center justify-center;
+}
+.name {
+	@apply text-3lg font-medium;
+}
+.type {
+	@apply text-lg font-light;
+}
+.color {
+	@apply w-7 h-7 rounded-sm;
+}

@@ -1,0 +1,7 @@
+query TypeById($id: Int!) {
+	typeById(id: $id) {
+		name
+		iconPath
+		uncheckedIconPath
+	}
+}

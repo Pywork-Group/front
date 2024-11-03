@@ -1,0 +1,10 @@
+query Holidays($query: QueryInput!) {
+	holidays(query: $query) {
+		holidays {
+			id
+			name
+			slug
+		}
+		count
+	}
+}

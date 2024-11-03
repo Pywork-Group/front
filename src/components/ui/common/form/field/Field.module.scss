@@ -1,0 +1,10 @@
+.box {
+	@apply relative pr-11;
+}
+.show {
+	@apply absolute right-3 top-0 bottom-0 my-auto;
+
+	> svg {
+		@apply text-white w-5 h-5;
+	}
+}

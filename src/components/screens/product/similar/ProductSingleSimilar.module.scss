@@ -1,0 +1,28 @@
+.products {
+	@apply mt-20;
+}
+.title {
+	@apply text-6lg font-semibold mb-5;
+}
+.list {
+	@apply flex flex-wrap gap-6;
+}
+.item {
+	min-width: calc(20% - 20px);
+	max-width: calc(20% - 20px);
+}
+
+@media (max-width: 1400px) {
+	.title {
+		font-size: 29px;
+	}
+}
+
+@media (max-width: 800px) {
+	.title {
+		font-size: 24px;
+	}
+	.products {
+		@apply mt-6;
+	}
+}

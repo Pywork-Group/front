@@ -1,0 +1,5 @@
+mutation ToggleCollection($id: Int!) {
+	toggleCollection(id: $id) {
+		id
+	}
+}

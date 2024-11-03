@@ -1,0 +1,24 @@
+.heading {
+	@apply whitespace-nowrap text-3lg font-medium text-gray-800 flex items-center justify-center gap-7;
+
+	> img {
+		@apply max-w-full w-full;
+		height: 1px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.heading {
+		@apply text-2lg;
+	}
+}
+
+@media (max-width: 600px) {
+	.heading {
+		@apply whitespace-normal w-full text-lg py-1.5 px-3 bg-red-400 text-center text-white font-semibold;
+
+		> img {
+			@apply hidden;
+		}
+	}
+}

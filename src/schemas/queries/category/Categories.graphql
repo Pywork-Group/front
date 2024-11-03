@@ -1,0 +1,10 @@
+query Categories($query: QueryCategoryInput!) {
+	categories(query: $query) {
+		categories {
+			id
+			name
+			slug
+		}
+		count
+	}
+}

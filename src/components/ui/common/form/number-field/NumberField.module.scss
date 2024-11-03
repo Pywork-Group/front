@@ -1,0 +1,10 @@
+.input {
+	@apply border border-gray-300 rounded-sm px-2 py-2 text-md-minus font-light font-roboto-flex;
+	-moz-appearance: textfield;
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}

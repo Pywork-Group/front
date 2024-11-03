@@ -1,0 +1,6 @@
+query PageBlock($type: BlockType!) {
+	pageBlock(type: $type) {
+		heading
+		content
+	}
+}

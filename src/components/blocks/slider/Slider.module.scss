@@ -1,0 +1,46 @@
+.sliders {
+	@apply relative flex;
+	margin-bottom: 60px;
+}
+.catalog {
+	@apply absolute bottom-0 left-0 right-0 w-fit mx-auto translate-y-1/2 font-semibold text-white text-2lg flex items-center gap-7 py-5 bg-red-400 rounded-lg whitespace-nowrap border-hover z-1;
+	padding: 21px 37px 21px 23px;
+}
+.catalogIcon {
+	@apply flex flex-col gap-1.5;
+	min-width: 26px;
+
+	> span {
+		@apply h-0.5 rounded-sm bg-white;
+	}
+}
+
+@media (max-width: 1700px) {
+	.sliders {
+		@apply flex flex-col;
+	}
+}
+
+@media (max-width: 1050px) {
+	.catalog {
+		@apply gap-3;
+		font-size: 17px;
+		padding: 15px 24px 15px 17px;
+	}
+	.catalogIcon {
+		min-width: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.sliders {
+		@apply mb-0;
+	}
+	.catalog {
+		@apply bottom-10 text-base;
+		padding: 13px 20px 13px 16px;
+	}
+	.catalogIcon {
+		@apply min-w-4 gap-1 justify-center mt-0.5;
+	}
+}

@@ -1,0 +1,16 @@
+.upload,
+.field,
+.select {
+	max-width: calc(50% - 20px);
+}
+.uploadedImages {
+	@apply flex items-start flex-wrap gap-5;
+
+	> div {
+		@apply w-full;
+		max-width: calc(100% / 3 - 14px);
+	}
+}
+.seo {
+	@apply w-full flex flex-col gap-1.5;
+}

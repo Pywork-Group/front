@@ -1,0 +1,5 @@
+mutation CreateType {
+	createType {
+		id
+	}
+}

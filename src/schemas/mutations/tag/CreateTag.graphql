@@ -1,0 +1,5 @@
+mutation CreateTag {
+	createTag {
+		id
+	}
+}

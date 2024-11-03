@@ -1,0 +1,28 @@
+.colors {
+	@apply font-roboto-flex mt-7;
+}
+.title {
+	@apply font-semibold text-6lg mb-5;
+}
+.list {
+	@apply flex flex-wrap gap-5;
+}
+.itemBtn {
+	@apply rounded-full transition-all;
+	width: 60px;
+	height: 60px;
+
+	&:hover,
+	&.picked {
+		@apply border-gray-200 border-solid;
+		border-width: 15px;
+	}
+
+	&.white {
+		@apply border border-solid border-gray-base;
+	}
+
+	> span {
+		@apply block w-full h-full rounded-full;
+	}
+}

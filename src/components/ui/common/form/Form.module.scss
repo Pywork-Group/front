@@ -1,0 +1,16 @@
+.field {
+	@apply w-full flex flex-col gap-1;
+}
+.box,
+.input {
+	@apply w-full rounded-sm bg-gray-800;
+}
+.input {
+	@apply outline-border-none py-2.5 px-3 text-white;
+}
+.label {
+	@apply w-full text-md;
+}
+.error {
+	@apply w-full font-light text-md-minus text-red-300;
+}

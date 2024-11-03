@@ -1,0 +1,23 @@
+.description {
+	@apply w-full;
+	max-width: 760px;
+}
+.title {
+	@apply font-semibold text-6lg mb-5;
+}
+.content {
+	@apply text-lg text-black;
+}
+
+@media (max-width: 1400px) {
+	.title {
+		font-size: 29px;
+	}
+}
+
+@media (max-width: 800px) {
+	.title {
+		@apply mb-4;
+		font-size: 24px;
+	}
+}

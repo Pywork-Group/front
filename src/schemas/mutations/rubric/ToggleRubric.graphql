@@ -1,0 +1,5 @@
+mutation ToggleRubric($id: Int!) {
+	toggleRubric(id: $id) {
+		id
+	}
+}

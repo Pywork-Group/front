@@ -1,0 +1,5 @@
+mutation ToggleReview($id: Int!) {
+	toggleReview(id: $id) {
+		id
+	}
+}
