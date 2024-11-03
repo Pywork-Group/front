@@ -210,6 +210,6 @@
 		@apply min-w-full max-w-full;
 	}
 	.infoTop {
-		@apply flex-wrap;
+		@apply flex-wrap gap-y-2;
 	}
 }

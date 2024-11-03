@@ -16,6 +16,23 @@
 	.title {
 		font-size: 29px;
 	}
+	.list {
+		@apply gap-5;
+	}
+	.item {
+		min-width: calc(25% - 15px);
+		max-width: calc(25% - 15px);
+	}
+}
+
+@media (max-width: 1100px) {
+	.list {
+		@apply gap-4;
+	}
+	.item {
+		min-width: calc(100% / 3 - 11px);
+		max-width: calc(100% / 3 - 11px);
+	}
 }
 
 @media (max-width: 800px) {
@@ -24,5 +41,26 @@
 	}
 	.products {
 		@apply mt-6;
+	}
+	.list {
+		@apply gap-3;
+	}
+	.item {
+		min-width: calc(50% - 6px);
+		max-width: calc(50% - 6px);
+	}
+}
+
+@media (max-width: 550px) {
+	.list {
+		@apply gap-0;
+	}
+	.item {
+		min-width: 50%;
+		max-width: 50%;
+
+		&:nth-child(n+3) {
+			@apply border-t-0;
+		}
 	}
 }

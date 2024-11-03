@@ -13,10 +13,19 @@
 	@apply w-full bg-gray-100 flex items-center justify-between;
 }
 .list {
-	@apply px-8 flex items-center gap-2;
+	@apply w-full overflow-hidden px-8 flex items-center gap-2;
 }
 .item {
-	@apply font-light whitespace-nowrap;
+	@apply font-light;
+
+	&:last-child {
+		@apply max-w-full overflow-hidden;
+	}
+
+	a,
+	span {
+		@apply w-full block whitespace-nowrap overflow-hidden text-ellipsis;
+	}
 
 	& + & {
 		@apply relative pl-4;
