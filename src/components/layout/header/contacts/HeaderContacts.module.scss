@@ -34,11 +34,7 @@
 
 @media (max-width: 700px) {
 	.list {
-		@apply hidden;
-	}
-	
-	/* .list {
-		@apply absolute right-0 w-full top-20 z-5 justify-center text-white;
+		@apply absolute right-0 w-full top-0 z-5 justify-center py-2.5 border-b border-gray-200;
 	}
 
 	.link,
@@ -52,11 +48,9 @@
 		> img {
 			@apply block w-4 h-4;
 		}
-	} */
+	}
 }
 
 @media (max-width: 400px) {
-	.list {
-		@apply top-16;
-	}
+
 }
